@@ -1,8 +1,13 @@
 import React from 'react';
 import logo from './assets/images/logo.svg';
 import './assets/css/App.css';
+/**
+ * Font Awesome 5
+ */
 
-import Navbar from "react-bootstrap/Navbar";
+/**
+ * Componentes  
+*/
 import CompMenu from "./componentes/cabecera/menu/CompMenu.js";
 
 function AprReact(req){
