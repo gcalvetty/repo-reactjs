@@ -1,14 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/images/logo.svg';
+import './assets/css/App.css';
 
+import CompMenu from "./componentes/cabecera/menu/CompMenu.js"
+
+function AprReact(req){
+  return req;
+}
 function App() {
-  return (
+  var nombre = "GECN-Dev 2k20";
+  return (    
     <div className="App">
+      <section className="componentes">
+        <CompMenu />
+      </section>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Aprendiendo React { nombre }
         </p>
         <a
           className="App-link"
@@ -16,7 +25,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {AprReact("Aprendiendo React")}
+
+
+
         </a>
       </header>
     </div>
