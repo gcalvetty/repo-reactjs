@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import Navbar from "react-bootstrap/Navbar";
 
 // ---- fontawesome imports
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faBlenderPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
@@ -25,18 +25,23 @@ class CompMenu extends Component{
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="#">
+                                    <FontAwesomeIcon icon={faHome} />
+                                    Inicio <span class="sr-only">(current)</span></a>
                             </li> 
                             <li>
-                                    
+                                <a class="nav-link" href="https://www.facebook.com/GecnDev" target="_blank">
+                                    <FontAwesomeIcon icon={faBlenderPhone} />
+                                    Facebook
+                                </a>
+                                
                             </li>                           
                             </ul>
                         </div>
-                    </nav>  
+                    </nav> 
+                    
                 </Navbar> 
-                <div>
-                    <FontAwesomeIcon icon={faHome} />
-                </div>  
+               
             </div>
         ); // Cerramos return
     }
