@@ -4,15 +4,15 @@ import './assets/css/App.css';
 /**
  * Font Awesome 5
  */
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 /**
  * Componentes  
 */
 import CompMenu from "./componentes/cabecera/menu/CompMenu.js";
 
-function AprReact(req){
-  return req;
-}
+
 function App() {
   var nombre = "GECN-Dev 2k20";
   return (    
