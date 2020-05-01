@@ -9,15 +9,27 @@ import {Navbar,
         Button} from "react-bootstrap";
 
 // ---- fontawesome imports
-import { faHome, faProjectDiagram, faEnvelopeOpenText, faSearch  } from "@fortawesome/free-solid-svg-icons";
-import {  } from "@fortawesome/free-regular-svg-icons";
-import { faFacebook, faLinkedinIn, faGitAlt, faBloggerB } from "@fortawesome/free-brands-svg-icons";
+import { faHome, faProjectDiagram, faEnvelopeOpenText, faSearch  } 
+from "@fortawesome/free-solid-svg-icons";
 
-import { FontAwesomeIcon as GEIco } from "@fortawesome/react-fontawesome";
+import { faLinkedinIn, faGitAlt, faBloggerB, faFacebook } 
+from "@fortawesome/free-brands-svg-icons";
+
+import { FontAwesomeIcon } from "@fortawesome/React-Fontawesome";
+
+
+class OpcMenu extends Component {
+    render() {
+    return(        
+        <NavDropdown.Item href={this.props.href} target="_blank">
+             <FontAwesomeIcon icon={this.props.icoFont}/> {this.props.nombre}             
+        </NavDropdown.Item>);
+    }
+}
 
 
 class CompMenu extends Component{    
-    render(){        
+    render(){            
         return(
             <div className="MenuGECN">  
             
@@ -27,30 +39,36 @@ class CompMenu extends Component{
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
                     <Nav.Link href="#Inicio">
-                        <GEIco icon={faHome} /> Inicio
+                        <FontAwesomeIcon icon={faHome} /> Inicio
                     </Nav.Link>
                     <Nav.Link href="#Portafolio">
-                        <GEIco icon={faProjectDiagram} /> Portafolio</Nav.Link>
+                        <FontAwesomeIcon icon={faProjectDiagram} /> Portafolio</Nav.Link>
                     
-                    <NavDropdown title="Redes" id="basic-nav-dropdown">                    
-                        <NavDropdown.Item href="https://www.facebook.com/GecnDev/" target="_blank" rel="noopener noreferrer">
-                            <GEIco icon={faFacebook} /> Facebook</NavDropdown.Item>
-                        <NavDropdown.Item href="https://www.linkedin.com/in/gcalvetty/" target="_blank" rel="noopener noreferrer">
-                            <GEIco icon={faLinkedinIn} /> LinkedIn</NavDropdown.Item>
-                        <NavDropdown.Item href="https://github.com/gcalvetty/" target="_blank" rel="noopener noreferrer">
-                            <GEIco icon={faGitAlt} target="_blank" /> gitHub</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                        <NavDropdown.Item href="https://gcalvetty.wordpress.com/" target="_blank" rel="noopener noreferrer">
-                            <GEIco icon={faBloggerB} /> Blog</NavDropdown.Item>
+                    <NavDropdown title="Redes" id="basic-nav-dropdown">                             
+                        <OpcMenu href="https://www.facebook.com/GecnDev/"
+                                  icoFont={faFacebook}
+                                  nombre="Facebook"/>
+                            
+                        <OpcMenu href="https://www.linkedin.com/in/gcalvetty/"
+                                  icoFont={faLinkedinIn}
+                                  nombre="LinkedIn"/>
+
+                        <OpcMenu href="https://github.com/gcalvetty/"
+                                  icoFont={faGitAlt}
+                                  nombre="gitHub"/>
+
+                        <OpcMenu href="https://gcalvetty.wordpress.com/"
+                                  icoFont={faBloggerB}
+                                  nombre="Blog"/>
                     </NavDropdown>
 
                     <Nav.Link href="#Contacto">
-                            <GEIco icon={faEnvelopeOpenText} /> Contacto</Nav.Link>
+                            <FontAwesomeIcon icon={faEnvelopeOpenText} /> Contacto</Nav.Link>
                     </Nav>
                     <Form inline>
                         <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-success"> 
-                            <GEIco icon={faSearch} /> Buscar</Button>
+                            <FontAwesomeIcon icon={faSearch} /> Buscar</Button>
                     </Form>
                 </Navbar.Collapse>
                 </Navbar>
@@ -59,5 +77,4 @@ class CompMenu extends Component{
         ); // Cerramos return
     }
 }
-
 export default CompMenu;

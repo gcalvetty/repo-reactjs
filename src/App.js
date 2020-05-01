@@ -1,16 +1,14 @@
 import React from 'react';
-import logo from './assets/images/logo.svg';
+import logo from './assets/images/logo-gecn.png';
 import './assets/css/App.css';
-/**
- * Font Awesome 5
- */
+import './assets/css/Footer.css';
+
+// ---- Importing the Bootstrap CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-/**
- * Componentes  
-*/
-import CompMenu from "./componentes/cabecera/menu/CompMenu.js";
+// ---- Componentes 
+import CompMenu from "./componentes/cabecera/menu/CompMenu2.js";
+import CompFooter from "./componentes/pie/CompFooter.js";
 
 
 function App() {
@@ -18,17 +16,19 @@ function App() {
   return (    
     <div className="App">      
       <section className="componentes">
-          <CompMenu />
+        <CompMenu/>
       </section>
-      <header className="App-header">
+      <header className="App-header" target="Incio">
         
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           React - { nombre }
         </p>        
       </header>
+      <section className="componentes">
+        <CompFooter/>
+      </section>
     </div>
   );
 }
-
 export default App;

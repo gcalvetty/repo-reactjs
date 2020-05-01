@@ -1,0 +1,9 @@
+.FooterGECN{  
+  background-color: #3d4350;
+  min-height: 25vh;
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  font-size: calc(16px);
+  color: white;
+}
