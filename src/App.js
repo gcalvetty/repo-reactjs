@@ -3,9 +3,6 @@ import logo from './assets/images/logo-gecn.png';
 import './assets/css/App.css';
 import './assets/css/Footer.css';
 
-// ---- Importing the Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 // ---- Componentes 
 import CompMenu from "./componentes/cabecera/menu/CompMenu2.js";
 import CompFooter from "./componentes/pie/CompFooter.js";
