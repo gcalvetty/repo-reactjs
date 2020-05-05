@@ -15,15 +15,17 @@ from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGitAlt, faBloggerB, faFacebook } 
 from "@fortawesome/free-brands-svg-icons";
 
-import { FontAwesomeIcon } from "@fortawesome/React-Fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 class OpcMenu extends Component {
     render() {
-    return(        
+    return( 
+        <Real.Fragment>
         <NavDropdown.Item href={this.props.href} target="_blank">
              <FontAwesomeIcon icon={this.props.icoFont}/> {this.props.nombre}             
         </NavDropdown.Item>);
+        </Real.Fragment>       
     }
 }
 
