@@ -1,22 +1,27 @@
-import React from 'react';
-import { Route, Switch, Router } from 'react-router-dom';
+import React, {Component} from 'react';
+import { BrowserRouter as Route, Switch, Router } from 'react-router-dom';
+import Inicio from '../layouts/Inicio.js';
+import Portafolio from '../layouts/Portafolio.js';
+import Blog from '../layouts/Blog.js';
+import Contacto from "../layouts/Contacto.js";
+import NoMatch from "../layouts/NoMatch.js";
 
-
-class CompRutas extends Component {
-    state = {  }
+class CompRutas extends Component {    
     render() { 
-        return (
-            <Router>
-                <Switch>
-                    <Route exact path="/">Incio</Route>
-                    <Route path="/portafolio">Portafolio</Route>
-                    <Route path="/blog">Blog</Route>
-                    <Route path="/contacto">Contacto</Route>
-                    <Route component={NoMatch}/>
-                </Switch>
-            </Router>            
+        return ( 
+                <React.Fragment>
+                    <Router>
+                        
+                            <Route exact path="/" component={Inicio}/>
+                            <Route path="/Portafolio" component={Portafolio} />
+                            <Route path="/Blog" component={Blog}/>
+                            <Route path="/Contacto" component={Contacto}/>
+                            <Route component={NoMatch}/>
+                        
+                    </Router>                        
+                </React.Fragment>                
           );
-    }
+    } 
 }
- 
+
 export default CompRutas;

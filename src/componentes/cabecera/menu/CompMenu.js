@@ -25,7 +25,8 @@ class OpcMenu extends Component {
         <NavDropdown.Item href={this.props.href} target="_blank">
              <FontAwesomeIcon icon={this.props.icoFont}/> {this.props.nombre}             
         </NavDropdown.Item>);
-        </Real.Fragment>       
+        </Real.Fragment>
+    );       
     }
 }
 

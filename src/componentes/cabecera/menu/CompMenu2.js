@@ -32,15 +32,15 @@ class CompMenu2 extends Component{
         return(
             <div className="MenuGECN">                
                 <Navbar bg="light" expand="lg" fixed="top">
-                <Navbar.Brand href="#home">GECN-Dev</Navbar.Brand>
+                <Navbar.Brand href="/Inicio">GECN-Dev</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">                     
-                        <OpcMenu href="#Inicio"
+                        <OpcMenu href="/Inicio"
                                 icoFont={faHome}
                                 nombre="Inicio"/>
 
-                        <OpcMenu href="#Portafolio"
+                        <OpcMenu href="/Portafolio"
                                 icoFont={faProjectDiagram}
                                 nombre="Portafolio"/>    
 
@@ -62,7 +62,7 @@ class CompMenu2 extends Component{
                                     nombre="Blog"/>
                         </NavDropdown>    
 
-                        <OpcMenu href="#Contacto"
+                        <OpcMenu href="/Contacto"
                                 icoFont={faEnvelopeOpenText}
                                 nombre="Contact"/>                    
                     </Nav> 

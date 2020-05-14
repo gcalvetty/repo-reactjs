@@ -6,7 +6,7 @@ import './assets/css/index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import App from './App';
+import App from './App-ruta';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
